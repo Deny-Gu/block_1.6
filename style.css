@@ -787,7 +787,7 @@
     .services__read-more:hover {
       color: #c91d51; }
     .services__read-more:before {
-      content: url("/src/img/svg/expand.svg");
+      content: url("/dist/img/svg/expand.svg");
       margin-right: 15px;
       vertical-align: middle;
       width: 10px;
@@ -1090,7 +1090,7 @@
     .brands__read-more:hover {
       color: #ff3e79; }
     .brands__read-more_show:before {
-      content: url("/src/img/brands/expand-show.svg");
+      content: url("/dist/img/brands/expand-show.svg");
       margin-right: 15px;
       vertical-align: middle;
       width: 10px;
@@ -1098,7 +1098,7 @@
     .brands__read-more_hide {
       display: none; }
       .brands__read-more_hide:before {
-        content: url("/src/img/brands/expand-hide.svg");
+        content: url("/dist/img/brands/expand-hide.svg");
         margin-right: 15px;
         vertical-align: middle;
         width: 10px;
