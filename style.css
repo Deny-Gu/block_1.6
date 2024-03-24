@@ -1170,7 +1170,7 @@
     .technic__read-more:hover {
       color: #ff3e79; }
     .technic__read-more_show:before {
-      content: url("/src/img/brands/expand-show.svg");
+      content: url("https://deny-gu.github.io/block_1.6/img/brands/expand-show.svg");
       margin-right: 15px;
       vertical-align: middle;
       width: 10px;
@@ -1178,7 +1178,7 @@
     .technic__read-more_hide {
       display: none; }
       .technic__read-more_hide:before {
-        content: url("/src/img/brands/expand-hide.svg");
+        content: url("https://deny-gu.github.io/block_1.6/img/brands/expand-hide.svg");
         margin-right: 15px;
         vertical-align: middle;
         width: 10px;
