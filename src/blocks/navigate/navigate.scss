@@ -1,0 +1,84 @@
+.navigate {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  background-color: #fff;
+  z-index: 99;
+  position: relative;
+
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+
+  &__left-block,
+  &__right-block {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    align-items: center;
+    margin-left: 24px;
+
+    @media (min-width: $screen-xs) {
+      & {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__left-block {
+    & li {
+      @media (min-width: $screen-xs) {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      @media (min-width: $screen-md) {
+        &:nth-child(2) {
+          display: list-item;
+        }
+      }
+    }
+  }
+
+  &__right-block {
+    margin: 0 24px;
+
+    @media (min-width: $screen-xs) {
+      & {
+        margin: 0 16px;
+      }
+    }
+
+    & li {
+      @media (min-width: $screen-xs) {
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        &:nth-child(1) {
+          display: list-item;
+        }
+
+        &:nth-child(2) {
+          display: list-item;
+        }
+
+        &:nth-child(3) {
+          display: list-item;
+        }
+      }
+    }
+  }
+}

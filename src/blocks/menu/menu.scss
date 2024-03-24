@@ -1,0 +1,264 @@
+.menu {
+  @media (min-width: $screen-xs) {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #ffffffe0;
+    z-index: 99;
+    overflow: auto;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: block;
+    height: auto;
+    max-width: $screen-xs;
+    position: static;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #fff;
+
+    @media (min-width: $screen-xs) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 320px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      box-shadow: -1px 0px 15px -2px rgba(34, 60, 80, 0.2);
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 320px;
+      height: 100%;
+      display: flex;
+      position: relative;
+      z-index: 99;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 10px;
+    }
+  }
+
+  &__navigate {
+    @media (min-width: $screen-xs) {
+      height: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: auto;
+    }
+  }
+
+  &__left-block {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @media (min-width: $screen-xs) {
+      margin-left: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+    }
+  }
+
+  &__button_close {
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &__right-block {
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xs) {
+      margin-right: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 24px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+  }
+
+  &__item {
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $screen-xs) {
+      margin: 8px 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 10px 24px;
+    }
+
+    & a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #000;
+      transition: color 0.5s ease-in-out;
+    }
+
+    & a:hover {
+      color: $btnColorHover;
+    }
+
+    &_active a,
+    &_active a:hover {
+      color: #7e7e82;
+      transition: none;
+    }
+
+    &_active::before {
+      content: '';
+      height: 25px;
+      border: 5px solid #41f6d7;
+      border-radius: 5px;
+      vertical-align: middle;
+
+      @media (min-width: $screen-xs) {
+        margin-left: -24px;
+        margin-right: 16px;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-left: -30px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__footer-nav {
+    display: flex;
+    gap: 16px;
+
+    @media (min-width: $screen-xs) {
+      margin: 24px 16px 16px 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 24px 24px 16px 24px;
+    }
+  }
+
+  &__email {
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (min-width: $screen-xs) {
+      margin-left: 16px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__phone {
+    font-size: 24px;
+    font-weight: 700;
+
+    @media (min-width: $screen-xs) {
+      margin-left: 16px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__lang {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xs) {
+      margin-left: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+    }
+
+    & a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: $btnColorHover;
+      }
+    }
+  }
+
+  &__footer {
+    @media (min-width: $screen-xs) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 50%;
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu.show {
+  -webkit-animation: show 500ms ease both;
+  animation: show 500ms ease both;
+}
+
+.menu.hide {
+  -webkit-animation: hide 500ms ease both;
+  animation: hide 500ms ease both;
+}

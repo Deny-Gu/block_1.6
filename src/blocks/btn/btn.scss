@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 0;
+  background-color: $btnColor;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $btnColorHover;
+  }
+
+  & img {
+    vertical-align: middle;
+  }
+}

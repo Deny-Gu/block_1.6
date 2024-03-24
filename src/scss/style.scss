@@ -1,17 +1,47 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './variables.scss';
+@import '../fonts/TTLakes/stylesheet.css';
+@import '../blocks/btn/btn.scss';
+@import '../blocks/services/services.scss';
+@import '../blocks/menu/menu.scss';
+@import '../blocks/title-section/title-section.scss';
+@import '../blocks/brands/brands.scss';
+@import '../blocks/technic/technic.scss';
+@import '../blocks/price/price.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/modal/modal.scss';
+@import '../blocks/navigate/navigate.scss';
+@import '../blocks/swiper/swiper.scss';
+@import '../blocks/mobile-shadow/mobile-shadow.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
+  font-family: TT Lakes, sans-serif;
+  font-size: $textSize;
   background-color: $bgColor;
   color: $text;
+  min-width: $screen-xs;
+  max-width: $screen-xl;
+  margin: 0 auto;
+}
+
+main {
+  max-width: $screen-xl;
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+  }
+}
+
+a {
+  font-size: 16px;
+}
+
+.main-wrapper {
+  @media (min-width: $screen-xl) {
+    max-width: 1120px;
+  }
 }

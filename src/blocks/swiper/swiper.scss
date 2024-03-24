@@ -1,0 +1,133 @@
+.swiper {
+  // height: 120px;
+  margin-left: 16px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 0;
+    height: auto;
+  }
+
+  & .swiper-wrapper.brands__main {
+    margin-left: 16px;
+    margin-top: 10px;
+
+    @media (min-width: $screen-xs) {
+      height: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      height: 150px;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  & .swiper-wrapper.technic__main {
+    margin-left: 16px;
+    margin-top: 10px;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      height: 150px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      height: 150px;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  & .swiper-wrapper.price__main {
+    margin-left: 16px;
+    margin-top: 10px;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      height: 150px;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      height: 100%;
+      margin: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 24px 30px;
+    }
+
+    & .swiper-slide {
+      @media (min-width: $screen-md) {
+        width: 100%;
+      }
+    }
+  }
+
+  & .swiper-slide {
+    @media (min-width: $screen-md) {
+      width: 30.5%;
+      height: auto;
+
+      &:nth-child(2) {
+        & .price__item {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+      }
+
+      &:last-child {
+        & .price__item {
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        & .price__service {
+          border: none;
+        }
+
+        & .price__price {
+          border: none;
+        }
+
+        & .price__term {
+          border: none;
+        }
+
+        & .price__order {
+          border: none;
+        }
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 22.8%;
+    }
+
+    @media (min-width: $screen-xl) {
+      // width: 259px;
+    }
+  }
+
+  & .swiper-pagination {
+    @media (min-width: $screen-xs) {
+      position: static;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      margin-top: 10px;
+    }
+  }
+
+  & .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #b5b6bc;
+  }
+}

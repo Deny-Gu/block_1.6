@@ -1,0 +1,19 @@
+.title-section {
+  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+  border-top: 1px solid #d9fff5;
+
+  & h2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-xs) {
+      padding: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 16px 30px;
+    }
+  }
+}
