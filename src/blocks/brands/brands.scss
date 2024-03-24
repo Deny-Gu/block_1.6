@@ -85,7 +85,7 @@
     }
 
     &_show:before {
-      content: url('/src/img/brands/expand-show.svg');
+      content: url('./img/brands/expand-show.svg');
       margin-right: 15px;
       vertical-align: middle;
       width: 10px;
@@ -96,7 +96,7 @@
       display: none;
 
       &:before {
-        content: url('/src/img/brands/expand-hide.svg');
+        content: url('./img/brands/expand-hide.svg');
         margin-right: 15px;
         vertical-align: middle;
         width: 10px;
