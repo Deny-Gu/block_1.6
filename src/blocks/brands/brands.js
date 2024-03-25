@@ -3,6 +3,7 @@ const readMoreShow = document.querySelector('.brands__read-more_show')
 const readMoreHide = document.querySelector('.brands__read-more_hide')
 
 readMoreShow.addEventListener('click', () => {
+  brandsMain.classList.add('show-brands')
   brandsMain.style.height = '100%'
   readMoreShow.style.display = 'none'
   readMoreHide.style.display = 'inline'
